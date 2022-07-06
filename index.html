@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venom Coffee</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap&subset=vietnamese" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="./assets/css/normalize.min.css">
+    <link rel="stylesheet" href="./fonts/css/all.min.css">
+    <link rel="stylesheet" href="js/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+</head>
+<body>
+    <div class="app">
+        <!-- Header Navigation -->
+        <div class="header">
+            <div class="header__top">
+                <div class="grid wide">
+                    <nav class="header-with-search">
+                        <div class="header-with-search__slogan">
+                            <p class="header-with-search__title">
+                                Chào mừng bạn đến với Venom Coffee !!!
+                            </p>
+                        </div>
+                        <div class="header-with-search__account">
+                            <div class="header__search">
+                                <form action="/search" method="get" id="header__search-mini-form"> 
+                                    <input type="text" class="header__search-input">
+                                    <button class="header__search-btn">
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                    </button>
+                                </form>
+                            </div>
+                            <div class="sign-in">
+                                <p>
+                                    <a href="#"> Đăng nhập</a>
+                                </p>
+                            </div>
+                            <div class="sign-up">
+                                <p>
+                                    <a href="#"> Đăng ký</a>
+                                </p>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            
+            <div class="header__bottom">
+                <div class="grid wide">
+                    <ul class="hearder__navbar-menu">
+                        <li class="header__logo">
+                            <img src="./img/logo_cs.png" alt="">
+                        </li>
+                        <li id="nav-menu">
+                            <ul class="nav-menu">
+                                <li class="home">
+                                    <a href="#">Trang chủ</a>
+                                </li>
+                                <li class="menu-coffee">
+                                    <a href="#">Venom Menu</a>
+                                    <ul class="subnav-1">
+                                        <li  class="subnav-1__li1">Menu thức ăn</li>
+                                        <li class="subnav-1__li2">Menu thức uống
+                                            <ul class="subnav-1__sub">
+                                                <li class="subnav-1__sub-li1">Cà phê</li>
+                                                <li class="subnav-1__sub-li2">Trà sữa</li>
+                                                <li class="subnav-1__sub-li3">Nước giải khát</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="news">
+                                    <a href="#">Tin tức</a>
+                                </li>
+                                <li class="store">
+                                    <a href="#">Cửa hàng</a>
+                                    <ul class="subnav-2">
+                                        <li class="subnav-2__sub-li">
+                                            <h3>Menu thức ăn</h3>
+                                            <ul class="subnav-2__sub-list">
+                                                <li class="subnav-2__sub-item">Cơm gà</li>
+                                                <li class="subnav-2__sub-item">Cơm sườn</li>
+                                                <li class="subnav-2__sub-item">Cơm chiên</li>
+                                                <li class="subnav-2__sub-item">Mì xào bò</li>
+                                                <li class="subnav-2__sub-item">Mì xào hải sản</li>
+                                            </ul>
+                                        </li>
+                                        <li class="subnav-2__sub-li"><h3>Máy pha cà phê</h3></li>
+                                        <li class="subnav-2__sub-li"><h3>Các loại trà sữa</h3></li>
+                                        <li class="subnav-2__sub-li"><h3>Các loại cà phê</h3></li>
+                                    </ul>
+                                </li>
+                                <li class="about">
+                                    <a href="#">Giới thiệu</a>
+                                </li>
+                                <li class="contact">
+                                    <a href="#">Liên hệ</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slider Website -->
+        <div class="slider">
+            <div class="slider__content">
+                <!-- Slider main container -->
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <img src="./img/slide1.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/slide2.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/slide3b.jpg" alt="">
+                        </div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+                
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                
+                    <!-- If we need scrollbar -->
+                    <div class="swiper-scrollbar"></div>
+                </div>
+            </div>
+
+            <div class="cart-shopping">
+                <i class="icon-cart fa-regular fa-basket-shopping-simple"></i>
+                <div class="cart-count">
+                    <p>3</p>
+                </div>
+                <div class="cart-backet">
+                    <div class="cart-box">
+                        
+                        <div class="cart-box__wrap">
+                            <div class="cart-box__img">
+                                <img src="./img/oolongTea.png" alt="">
+                            </div>
+                            <div class="cart-box__detail">
+                                <div class="cart-box__name"><h2>Trà Ô long</h2></div>
+                                <div class="cart-box__price"><p>36.000 Đ</p></div>
+                                <div class="cart-box__inputQty">
+                                    <input class="minus is-form" type="button" value="-">
+                                    <input aria-label="quantity" class="input-qty" max="99" min="1" name="" type="number" value="1">
+                                    <input class="plus is-form" type="button" value="+">
+                                </div>
+                            </div>
+                            <div class="cart-box__delete">
+                                <i class="delete fa-light fa-circle-xmark"></i>
+                            </div>
+                        </div>
+                        <div class="cart-box__wrap">
+                            <div class="cart-box__img">
+                                <img src="./img/smoothIcedCoffee.png" alt="">
+                            </div>
+                            <div class="cart-box__detail">
+                                <div class="cart-box__name"><h2>Smooth Iced Coffee</h2></div>
+                                <div class="cart-box__price"><p>36.000 Đ</p></div>
+                                <div class="cart-box__inputQty">
+                                    <input class="minus is-form" type="button" value="-">
+                                    <input aria-label="quantity" class="input-qty" max="99" min="1" name="" type="number" value="1">
+                                    <input class="plus is-form" type="button" value="+">
+                                </div>
+                            </div>
+                            <div class="cart-box__delete">
+                                <i class="delete fa-light fa-circle-xmark"></i>
+                            </div>
+                        </div>
+
+                        <div class="cart-box__wrap">
+                            <div class="cart-box__img">
+                                <img src="./img/oolongTea.png" alt="">
+                            </div>
+                            <div class="cart-box__detail">
+                                <div class="cart-box__name"><h2>Trà Ô long</h2></div>
+                                <div class="cart-box__price"><p>36.000 Đ</p></div>
+                                <div class="cart-box__inputQty">
+                                    <input class="minus is-form" type="button" value="-">
+                                    <input aria-label="quantity" class="input-qty" max="99" min="1" name="" type="number" value="1">
+                                    <input class="plus is-form" type="button" value="+">
+                                </div>
+                            </div>
+                            <div class="cart-box__delete">
+                                <i class="delete fa-light fa-circle-xmark"></i>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="cart-tempority-total">
+                        <p class="name">Tổng tiền tạm tính: </p>
+                        <p class="price">108.000 Đ</p>
+                    </div>
+
+                    <div class="charge-cart-btn">
+                        <a href="#" class="charge-cart-btn__cart">Đến giỏ hàng</a>
+                        <button class=" btn-charge">
+                            <p>Tiến hành thanh toán</p>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="cart-circle1"></div>
+            <div class="cart-circle2"></div>
+            <div class="fb-messenger">
+                <i class="fb fa-brands fa-facebook-messenger"></i>
+            </div>
+            <div class="telephone">
+                <i class="phone fa-regular fa-phone-volume"></i>
+            </div>
+            <div class="zalo">
+                <img src="./img/zalo.png" class="zalophone">
+            </div>
+        </div>
+
+        <!-- Description Website -->
+        <div class="boxer">
+            <div class="grid wide row">
+                <div class="boxer__wrap col c-4">
+                    <div class="boxer__wrap-img">
+                        <img src="./img/Mew Coffee.png" alt="">
+                    </div>
+                    <h2>Pha chế đồ uống</h2>
+                    <p>Chúng tôi giúp bạn tiết kiệm thời gian với những khóa học 
+                    Barista từ cơ bản đến nâng cao và sẵn sàng chia sẻ “bí quyết của nghề”</p>
+                </div>
+
+                <div class="boxer__wrap c-4">
+                    <div class="boxer__wrap-img">
+                        <img src="./img/Mew Coffee.png" alt="">
+                    </div>
+                    <h2>Pha chế đồ uống</h2>
+                    <p>Chúng tôi giúp bạn tiết kiệm thời gian với những khóa học 
+                    Barista từ cơ bản đến nâng cao và sẵn sàng chia sẻ “bí quyết của nghề”</p>
+                </div>
+
+                <div class="boxer__wrap c-4">
+                    <div class="boxer__wrap-img">
+                        <img src="./img/Mew Coffee.png" alt="">
+                    </div>
+                    <h2>Pha chế đồ uống</h2>
+                    <p>Chúng tôi giúp bạn tiết kiệm thời gian với những khóa học 
+                    Barista từ cơ bản đến nâng cao và sẵn sàng chia sẻ “bí quyết của nghề”</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Menu Today-->
+        <div class="menu-today">
+            <div class="grid wide row">
+                <h1>Thức uống đặc biệt hôm nay</h1>
+                <div class="menu-today__wrap col c-12">
+                    <ul class="menu-today__list">
+                        <!-- <li class="menu-today__item">
+                            <div class="menu-today__item-img">
+                                <img src="./img/oolongTea.png" alt="">
+                            </div>
+                            <div class="menu-today__item-name">
+                                <h2>Trà Ô long</h2>
+                            </div>
+                            <div class="menu-today__item-desc">
+                                <p>có hình viên tròn, hoàn toàn khác với các loại trà khác. Trà Oolong&nbsp;có độ oxy hoá từ 8-80% có mùi thơm nồng, nước xanh vàng, 
+                                vị dịu nhẹ dễ uống và có rất nhiều công dụng với sức khỏe.</p>
+                            </div>
+                            <div class="menu-today__item-price">
+                                <p>36.000 Đ</p>
+                            </div>
+                            <button class="menu-today__item-btn">
+                                Mua ngay
+                            </button>
+                        </li> -->
+                    </ul>
+                    <div class="menu-today__pagination">
+                        <button class="menu-today__pagination-prev btn-arrow">
+                            <i class="fa-regular fa-angle-left"></i>
+                        </button>
+                        <div class="menu-today__number-page">
+                            <!-- <li class="active"><a>1</a></li>
+                            <li><a>2</a></li>
+                            <li><a>3</a></li>
+                            <li><a>4</a></li>
+                            <li><a>5</a></li>
+                            <li><a>6</a></li> -->
+                        </div>
+                        <button class="menu-today__pagination-next btn-arrow">
+                            <i class="fa-regular fa-angle-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menu -->
+        <div class="menu">
+
+        </div>
+
+        <!-- Menu shopping -->
+        <div class="menu-shop">
+
+        </div>
+
+        <!-- Review -->
+        <div class="review">
+
+        </div>
+
+        <!-- News -->
+        <div class="news">
+
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+
+        </footer>
+    </div>
+    
+    <script src="./js/swiper/swiper-bundle.min.js"></script>
+    <script src="js/swiper/swiper-bundle.js"></script> 
+    <script src="./js/main.js"></script>
+</body>
+</html>
