@@ -42,7 +42,7 @@ let countSlider = 0;
     const swiper = new Swiper('.swiper', {
         // Optional parameters
         direction: 'horizontal',
-        effect: "fade",
+        effect: "default",
         loop: true,
         autoplay: {
             delay: 3000,
@@ -200,7 +200,6 @@ renderListPage();
 
 function changePage() {
     const currentPages = $$('.menu-today__number-page li');
-    console.log(currentPage);
     for (let i = 0; i < currentPages.length; i++) {
         currentPages[i].addEventListener('click', () => {
             const value = i + 1;
@@ -231,18 +230,135 @@ btnPrev.addEventListener("click", function() {
     renderNewCoffee(newCoffee);
 });
 
+
+const menuCoffee = [
+    {
+        id: 1,
+        name: "ICED CARAMEL LATTE 1",
+        price: "52,000",
+        image: "./img/ICEDCARAMELLATTE.jpg",
+        discount: 0
+    }, 
+    {
+        id: 2,
+        name: "CARAMEL MACCHIATO 2",
+        price: "45,000",
+        image: "./img/CARAMELMACCHIATO.jpg",
+        discount: 0
+    },
+    {
+        id: 3,
+        name: "CARAMEL MACCHIATO 3",
+        price: "45,000",
+        image: "./img/CARAMELMACCHIATO.jpg",
+        discount: 0
+    },
+    {
+        id: 4,
+        name: "CARAMEL MACCHIATO 4",
+        price: "45,000",
+        image: "./img/CARAMELMACCHIATO.jpg",
+        discount: 0
+    },
+    {
+        id: 5,
+        name: "CARAMEL MACCHIATO 5",
+        price: "45,000",
+        image: "./img/CARAMELMACCHIATO.jpg",
+        discount: 0
+    },
+    {
+        id: 6,
+        name: "CARAMEL MACCHIATO 6",
+        price: "45,000",
+        image: "./img/CARAMELMACCHIATO.jpg",
+        discount: 0
+    },
+    {
+        id: 7,
+        name: "CARAMEL MACCHIATO 7",
+        price: "45,000",
+        image: "./img/CARAMELMACCHIATO.jpg",
+        discount: 0
+    },
+    {
+        id: 8,
+        name: "CARAMEL MACCHIATO 8",
+        price: "45,000",
+        image: "./img/CARAMELMACCHIATO.jpg",
+        discount: 0
+    },
+    {
+        id: 9,
+        name: "CARAMEL MACCHIATO 9",
+        price: "45,000",
+        image: "./img/CARAMELMACCHIATO.jpg",
+        discount: 0
+    },
+    {
+        id: 10,
+        name: "CARAMEL MACCHIATO 10",
+        price: "45,000",
+        image: "./img/CARAMELMACCHIATO.jpg",
+        discount: 0
+    },
+    {
+        id: 11,
+        name: "CARAMEL MACCHIATO 11",
+        price: "45,000",
+        image: "./img/caramelmacchiato.jpg",
+        discount: 0
+    },
+    {
+        id: 12,
+        name: "CARAMEL MACCHIATO 12",
+        price: "45,000",
+        image: "./img/caramelmacchiato.jpg",
+        discount: "30,000"
+    },
+]
+
+const limitCoffee = 10;
+const totalCoffee = menuCoffee.length;
+
+function sortNewestCoffee(arr) {
+    for (let i = 0; i <= totalCoffee; i++) {
+        for (let j = i + 1; j < totalCoffee; j++) { 
+            if(Object.values(arr[i])[0] < Object.values(arr[j])[0]) {
+                let temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            };
+        }
+    }
+    return arr;
+}
+sortNewestCoffee(menuCoffee);
+
 function renderMenuCoffee() {
-    const newCoffees = newCoffee.map(function(item, index) {
-        if (index >= start && index < end) 
+    const menuCoffees = menuCoffee.map(function(item, index) {
+        if (item.id > totalCoffee - limitCoffee)
         {
-            return `<li class="menu__item col c-6">
-            <div class="menu__img">
-                <img src="" alt="">
-            </div>
-            <div class="menu__title"></div>
-            <div class="menu__price"></div>
-            </li>`;  
+            return `
+            <li class="menu__item col c-6">
+                <div class="menu__img">
+                    <img src="${item.image}" alt="">
+                </div>
+                <div class="menu__detail">
+                    <div class="menu__title-onday">
+                        ${item.name}
+                    </div>
+                    <div class="menu__price">
+                        ${item.price} Đ
+                    </div>
+                    <div class="menu__price-discount">
+                        ${item.discount !== 0 ? item.discount: 'không giảm'} Đ
+                    </div>
+                </div>
+            </li>
+            `;
         }
     });
-    $(".menu-today__list").innerHTML = newCoffees.join('');
+    $(".menu__list").innerHTML = menuCoffees.join('');
 }
+renderMenuCoffee();
